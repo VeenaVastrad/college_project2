@@ -2,7 +2,9 @@
 <html lang="en">
 
   <?php include 'assets/includes/header.php';?>
+  
 <body>
+
   <?php include 'assets/includes/navheader.php';?>
 
   <!-- ***** Main Banner Area Start ***** -->

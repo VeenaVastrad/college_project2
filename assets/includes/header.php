@@ -17,5 +17,5 @@
     <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
-
+    <link rel="stylesheet" href="assets/css/college_project.css">
 </head>

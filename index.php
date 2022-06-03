@@ -1,3 +1,30 @@
+<?php   
+include "assets/db_includes/connect.php";
+   
+if(isset($_POST['submit'])){
+   $name = $_POST['name'];
+   	$email = $_POST['email'];
+   	$phone_number = $_POST['phone_number'];
+	$course_intrested = $_POST['course_intrested'];
+	
+   }
+   
+   $sql = "INSERT INTO admission_ug(name,email,phone_number,course_intrested) VALUES ('$name','$email','$phone_number','$course_intrested')";
+   $result = $conn->query($sql);
+   
+   if(isset($_POST['pg_submit'])){
+   $name = $_POST['name'];
+   	$email = $_POST['email'];
+   	$phone_number = $_POST['phone_number'];
+	$course_intrested = $_POST['course_intrested'];
+	
+   }
+   
+   $sql = "INSERT INTO admission_pg(name,email,phone_number,course_intrested) VALUES ('$name','$email','$phone_number','$course_intrested')";
+   $result = $conn->query($sql);
+   $sql ="select * from professor_details";
+   $result = $conn->query($sql);
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,16 +131,12 @@
         </div>
         <div class="col-lg-4">
           <div class="categories">
-            <h4>Meeting Catgories</h4>
-            <ul>
-              <li><a href="#">Sed tempus enim leo</a></li>
-              <li><a href="#">Aenean molestie quis</a></li>
-              <li><a href="#">Cras et metus vestibulum</a></li>
-              <li><a href="#">Nam et condimentum</a></li>
-              <li><a href="#">Phasellus nec sapien</a></li>
-            </ul>
+            <h4>New Updates</h4>
+             <marquee width="100%" direction="up" height="100px">
+	Recent events and marks announcement of the students
+	</marquee>
             <div class="main-button-red">
-              <a href="meetings.php">All Upcoming Meetings</a>
+              <a href="meetings.php">All Upcoming Updates</a>
             </div>
           </div>
         </div>
@@ -557,6 +580,237 @@
       </div>
     </div>
   </section>
+  <section class="apply-now" id="admission">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>APPLY FOR UG DEGREE</h3>
+                <p>Click on below button to apply the intrested Under Graduate course in our college.</p>
+                <div class="main-button-red">
+				<!-- Button trigger modal -->
+
+<div class="scroll-to-section" data-bs-toggle="modal" data-bs-target="#ugModal"><a href="#">Join Us Now!</a></div>
+  
+<!-- Modal -->
+<div class="modal fade" id="ugModal" tabindex="-1" aria-labelledby="ugModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ugModalLabel">Join Us Now!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+	    <form  action="" method="POST">
+      <div class="modal-body">
+       
+                  <!-- Name input -->
+                  <div class="form-outline mb-4">
+                     <label class="form-label">Name</label>
+                     <div><input type="text"  class="form-control" name="name" style="width:100%"/></div>
+                  </div>
+				  
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                     <label class="form-label">Email</label>
+                     <div><input type="text"  class="form-control" name="email" style="width:100%"/>
+                     </div>
+					 </div>
+					                   <!-- Phone number input -->
+                  
+					   <div class="form-outline mb-4">
+                     <label class="form-label" >Phone Number</label>
+                     <div><input type="text"  class="form-control" name="phone_number" style="width:100%"/>
+                     </div>
+					 </div>
+					                   <!-- course input -->
+                  
+					   <div class="form-outline mb-4">
+                     <label class="form-label" >Course Intrested</label>
+                     <div><select name="course_intrested" class="form-select">
+                        <option>Electronics and Communication Engineering</option>
+                        <option>Computer Science Engineering</option>
+                        <option>Mechanical Engineering</option>
+						<option>Civil Engineering</option>
+                     </select>
+					 </div>
+					 </div>
+                     
+                     <!-- submit -->
+					   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Skip</button>
+      
+					     <input class="btn btn-primary" type="submit" name="submit" value="submit" />
+           
+			 </div>
+               </form>
+      
+      <div class="modal-footer">
+       </div>
+  
+  </div>
+</div>
+</div>          <!--<div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>-->
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>APPLY FOR PG DEGREE</h3>
+                <p>Click on below button to apply the intrested Post Graduate course in our college.</p>
+                <div class="main-button-yellow">
+                 <div class="scroll-to-section" data-bs-toggle="modal" data-bs-target="#pgModal"><a href="#">Join Us Now!</a></div>
+ 
+				  <!-- Modal -->
+<div class="modal fade" id="pgModal" tabindex="-1" aria-labelledby="pgModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pgModalLabel">Join Us Now!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+	    <form  action="" method="POST">
+      <div class="modal-body">
+       
+                  <!-- Name input -->
+                  <div class="form-outline mb-4">
+                     <label class="form-label">Name</label>
+                     <div><input type="text"  class="form-control" name="name" style="width:100%"/></div>
+                  </div>
+				  
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                     <label class="form-label">Email</label>
+                     <div><input type="text"  class="form-control" name="email" style="width:100%"/>
+                     </div>
+					 </div>
+					                   <!-- Phone number input -->
+                  
+					   <div class="form-outline mb-4">
+                     <label class="form-label" >Phone Number</label>
+                     <div><input type="text"  class="form-control" name="phone_number" style="width:100%"/>
+                     </div>
+					 </div>
+					                   <!-- course input -->
+                  
+					   <div class="form-outline mb-4">
+                     <label class="form-label" >Course Intrested</label>
+                     <div><select name="course_intrested" class="form-select">
+                        <option>M.Tech in Electronics and Communication Engineering</option>
+                        <option>M.Tech in Computer Science Engineering</option>
+                        <option>M.Tech Mechanical Engineering</option>
+						<option>M.Tech Civil Engineering</option>
+                     </select>
+					 </div>
+					 </div>
+                     
+                     <!-- submit -->
+					   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Skip</button>
+      
+					     <input class="btn btn-primary" type="submit" name="pg_submit" value="submit" />
+           
+			 </div>
+               </form>
+      
+      <div class="modal-footer">
+       </div>
+  
+  </div>
+</div>
+</div>          
+
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="accordions is-first-expanded">
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>College Professor Details</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+
+                <!--<div class="accordion-body">
+                    <div class="content">
+                        <p>If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.</p>
+                    </div>
+                </div>-->
+            </article>
+			<div class="container mt-3 accordion-body">
+         <table class="table table-dark table-hover">
+            <thead>
+               <tr>
+                  <th>Prof. Name</th>
+        <th>Department</th>
+       <th>Contact</th>
+               </tr>
+            </thead>
+            <tbody>
+               <?php if ($result->num_rows>0){
+                  while ($row = $result->fetch_assoc()){
+                  	?>
+               <tr>
+                  <td><?php echo $row['prof_name'];?></td>
+				  <td><?php echo $row['department'];?></td>                  
+                 <td><?php echo $row['contact'];?></td>
+               </tr>
+               <?php }
+                  }
+                  ?>
+            </tbody>
+         </table>
+      </div>
+          <!--  <article class="accordion">
+                <div class="accordion-head">
+                    <span>HTML CSS Bootstrap Layout</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna, maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
+                        Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget nibh consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus sollicitudin tincidunt.</p>
+                    </div>
+                </div>
+            </article>-->
+            <!--<article class="accordion">
+                <div class="accordion-head">
+                    <span>Please tell your friends</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit, at ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur velit.<br><br>
+                        Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor sapien et quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
+                    </div>
+                </div>
+            </article>-->
+            <!--<article class="accordion last-accordion">
+                <div class="accordion-head">
+                    <span>Share this to your colleagues</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br><br>
+                        Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi quis, convallis nisi.</p>
+                    </div>
+                </div>
+            </article>-->
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="our-facts">
     <div class="container">
@@ -683,6 +937,8 @@
         </p>
     </div>
   </section>
+  
+  
   <?php include 'assets/includes/footer.php';?>
 </body>
 

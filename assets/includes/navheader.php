@@ -36,17 +36,19 @@
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
                           <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                          <li><a href="meetings.php">Meetings</a></li>
-                          <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
+                          <li class="scroll-to-section"><a href="#apply">About Us</a></li>
+                          <li class="scroll-to-section"><a href="#courses">Courses</a></li>
+                          <li><a href="#admission">Admission</a></li>
                           <li class="has-sub">
-                              <a href="javascript:void(0)">Pages</a>
+                              <a href="javascript:void(0)">Programmes</a>
                               <ul class="sub-menu">
-                                  <li><a href="meetings.php">Upcoming Meetings</a></li>
-                                  <li><a href="meeting-details.php">Meeting Details</a></li>
+                                  <li><a href="meetings.php">Sports</a></li>
+                                  <li><a href="meeting-details.php">Arts</a></li>
+                                  <li><a href="meeting-details.php"> Other Activities</a></li>
                               </ul>
                           </li>
-                          <li class="scroll-to-section"><a href="#courses">Courses</a></li> 
-                          <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
+                         <li class="scroll-to-section"><a href="#faq">FAQ's</a></li> 
+                         <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
                       </ul>        
                       <a class='menu-trigger'>
                           <span>Menu</span>

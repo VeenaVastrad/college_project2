@@ -1,0 +1,37 @@
+[
+    {
+      "prof_id": 1,
+      "prof_name":"Prof.1",
+      "department": "E&CE",
+      "position": "HOD",
+     "contact": "0123456789"
+
+    },
+    {
+        "prof_id": 2,
+      "prof_name":"Prof.2",
+      "department": "CS",
+      "position": "HOD",
+     "contact": "0123456789"
+  
+      },
+      {
+        "prof_id": 3,
+      "prof_name":"prof.3",
+      "department": "Civil",
+      "position": "HOD",
+     "contact": "0123456789"
+  
+      },
+      
+      {
+      "prof_id": 4,
+      "prof_name":"prof.4",
+      "department": "Mechanical",
+      "position": "HOD",
+     "contact": "0123456789"
+  
+      }
+
+
+]

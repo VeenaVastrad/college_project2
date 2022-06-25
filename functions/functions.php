@@ -1,5 +1,5 @@
 <?php 
-  if(isset($_POST['ug_pg_submit'])){
+/* if(isset($_POST['ug_pg_submit'])){
       $name = $_POST['name'];
        $email = $_POST['email'];
        $phone_number = $_POST['phone_number'];
@@ -20,7 +20,7 @@
       $result = $conn->query($sql);
    
       $sql ="select * from professor_details";
-      $result = $conn->query($sql);
+      $result = $conn->query($sql);*/
    
       $sql ="select * from utils";
       $result = $conn->query($sql);
